@@ -18,11 +18,11 @@ UCLASS(config=Game)
 class ADemoMultiPlayerCharacter : public ACharacter
 {
 	GENERATED_BODY()
-
+public:
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
-	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category=Mesh)
 	USkeletalMeshComponent* Mesh1P;
-
+private:
 	///** Gun mesh: 1st person view (seen only by self) */
 	//UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
 	//USkeletalMeshComponent* FP_Gun;
